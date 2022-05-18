@@ -8,6 +8,6 @@ runcmd:
   - apt install -y openvswitch-switch
   - apt install -y mininet
   - apt install -y  python3-pip
-  - /home/mininet/util/install.sh -fw
+  - /bin/sh /home/mininet/util/install.sh -fw
   - pip install ryu
   - pip install eventlet==0.30.2
