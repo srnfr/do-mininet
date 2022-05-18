@@ -10,5 +10,7 @@ snap:
         01: ['install', 'mininet']
         02: ['install', 'python3-pip']
 runcmd:
+  - /home/mininet/util/install.sh -fw
   - pip install ryu
   - pip install eventlet==0.30.2
+
