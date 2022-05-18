@@ -3,7 +3,12 @@ runcmd:
   - ufw disable
   - apt update && apt install -y mosh 
   - git clone -q "https://github.com/mininet/mininet" /home/mininet
+  - git clone -q "https://github.com/faucetsdn/ryu.git" /home/ryu
 snap:
     commands:
         00: ['install', 'openvswitch-switch']
         01: ['install', 'mininet']
+        02: ['install', 'python3-pip']
+runcmd:
+  - pip install ryu
+  - pip install eventlet==0.30.2
