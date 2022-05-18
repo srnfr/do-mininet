@@ -29,9 +29,9 @@ resource "digitalocean_tag" "tag" {
 ##  }
 }
 
-resource "digitalocean_droplet" "docker" {
+resource "digitalocean_droplet" "mininet" {
   image  = var.droplet_image
-  name   = "${var.prefix}-docker"
+  name   = "${var.prefix}-mininet"
   region = var.region_name
   size   = var.droplet_size
   tags               = [digitalocean_tag.tag.id]
@@ -39,13 +39,12 @@ resource "digitalocean_droplet" "docker" {
  ## private_networking = "true"
   ssh_keys           = var.ssh_keys
   user_data = "${file("cloud-init.yaml")}"
-##  user_data = "#cloud-config\nruncmd:\n  - /usr/bin/docker run -d -p 80:80 sagikazarmark/dvwa"
 }
 
-resource "digitalocean_record" "docker" {
+resource "digitalocean_record" "mininet" {
   domain = var.domain_name
   type   = "A"
-  name   = "docker"
-  value  = digitalocean_droplet.docker.ipv4_address
+  name   = "mininet"
+  value  = digitalocean_droplet.mininet.ipv4_address
   ttl    = 300
 }
