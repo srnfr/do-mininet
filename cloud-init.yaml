@@ -5,13 +5,9 @@ runcmd:
   - git clone -q "https://github.com/mininet/mininet" /home/mininet
   - git clone -q "https://github.com/faucetsdn/ryu.git" /home/ryu
   - git clone -q "https://bitbucket.org/sdnhub/ryu-starter-kit" /home/ryu/ryu/app/sdnhub_apps
-snap:
-    commands:
-        00: ['install', 'openvswitch-switch']
-        01: ['install', 'mininet']
-        02: ['install', 'python3-pip']
-runcmd:
+  - apt install -y openvswitch-switch
+  - apt install -y mininet
+  - apt install -y  python3-pip
   - /home/mininet/util/install.sh -fw
   - pip install ryu
   - pip install eventlet==0.30.2
-
