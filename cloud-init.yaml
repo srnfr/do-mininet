@@ -2,6 +2,7 @@
 runcmd:
   - ufw disable
   - apt update && apt install -y mosh atop openvswitch-switch mininet
+  - cd /root && git clone https://github.com/mininet/mininet
 snap:
     commands:
         00: ['install', 'yq']
