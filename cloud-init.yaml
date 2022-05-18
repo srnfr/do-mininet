@@ -1,8 +1,9 @@
 #cloud-config
 runcmd:
   - ufw disable
-  - apt update && apt install -y mosh atop openvswitch-switch mininet
-  - cd /root && git clone https://github.com/mininet/mininet
+  - apt update && apt install -y mosh 
+  - git clone -q "https://github.com/mininet/mininet" /home/mininet
 snap:
     commands:
-        00: ['install', 'yq']
+        00: ['install', 'openvswitch-switch']
+        01: ['install', 'mininet']
