@@ -1,1 +1,1 @@
-Create a simple docker droplet + DNS FQDN
+Create a simple mininet droplet + DNS FQDN
