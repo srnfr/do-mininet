@@ -11,5 +11,5 @@ runcmd:
   - /usr/bin/bash /home/mininet/util/install.sh -nfw
   - pip install ryu
   - pip install eventlet==0.30.2
-  - apt install python3-ryu
+  - apt install -y python3-ryu
   - TZ="Europe/Paris"; ln -snf /usr/share/zoneinfo/$TZ /etc/localtime ; echo $TZ > /etc/timezone
