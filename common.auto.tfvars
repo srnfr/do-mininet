@@ -3,7 +3,7 @@
 # Resources will be prefixed with this to avoid clashing names
 prefix = "vtu"
 # Region where resources should be created
-region_name = "ams3"
+region_name = "lon1"
 # Droplet size
 ##droplet_size = "s-1vcpu-2gb"
 droplet_size = "s-2vcpu-4gb-amd"
