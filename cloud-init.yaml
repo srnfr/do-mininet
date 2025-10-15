@@ -1,7 +1,7 @@
 #cloud-config
 runcmd:
   - ufw disable
-  - apt update && apt install -y mosh 
+  - apt update && apt install -y mosh docker.io
   - git clone -q "https://github.com/mininet/mininet" /home/mininet
   - git clone -q "https://github.com/faucetsdn/ryu.git" /home/ryu
   - git clone -q "https://bitbucket.org/sdnhub/ryu-starter-kit" /home/ryu/ryu/app/sdnhub_apps
