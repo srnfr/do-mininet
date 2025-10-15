@@ -8,7 +8,7 @@ region_name = "lon1"
 ##droplet_size = "s-1vcpu-2gb"
 droplet_size = "s-2vcpu-4gb-amd"
 ##droplet_size = "s-2vcpu-2gb"
-droplet_image = "ubuntu-20-04-x64"
+droplet_image = "ubuntu-22-04-x64"
 tag_name = "mininet"
 
 ## TO BE CUSTOMIZED BY YOUR NEEDS ###
